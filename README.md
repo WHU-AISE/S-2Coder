@@ -1,2 +1,2 @@
-# S$^2$Coder
-This repository contains the implementation of S$^2$Coder, a syntax-constrained and structure-augmented code generation framework.
+# S<sup>2</sup>Coder
+This repository contains the implementation of S<sup>2</sup>Coder, a syntax-constrained and structure-augmented code generation framework.
