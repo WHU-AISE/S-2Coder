@@ -100,9 +100,9 @@ Set API_Key for GPT and DeepSeek in `config.py`
 ### Generalization Experiment
 + Special dataset
 
-Datasets are [HearthStone and Magic](https://github.com/google-deepmind/card2code), the retrieved corpus are the training set.
+   Datasets are [HearthStone and Magic](https://github.com/google-deepmind/card2code), the retrieved corpus are the training set.
 
 
 + Plug-and-play
 
-To further validate the effectiveness of our proposed framework, we conducted generalization experiments on the state-of-the-art agent-based code generation method AllianceCoder on CoderEval (Python). The results demonstrate that our pluggable approach can further enhance AllianceCoder's performance (from 48.7% to 49.13%, improvement 0.88%).
+   To further validate the effectiveness of our proposed framework, we conducted generalization experiments on the state-of-the-art agent-based code generation method AllianceCoder on CoderEval (Python). The results demonstrate that our pluggable approach can further enhance AllianceCoder's performance (from 48.7% to 49.13%, improvement 0.88%).
