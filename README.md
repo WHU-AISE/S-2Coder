@@ -26,7 +26,7 @@ Apply an iterative retrieval-generation pipeline to generate code at various lev
 
 Propose a hard meta-graph prompt template to utilize the graphical view of code blocks based on the control flow and data flow. 
 
-+ [DRACO]( https://github.com/nju-websoft/DraCo)
++ [DRACO](https://github.com/nju-websoft/DraCo)
 
 Leverage dataflow analysis to enhance the input prompt by integrating structurally relevant background knowledge.
 
@@ -97,3 +97,6 @@ Set API_Key for GPT and DeepSeek in `config.py`
 
    `./main.py --dataset_name dataset_name --language language --top_k top_k --checker True --sr True -- coarse_flag True --fine_flag False --model_name model_name --n n`
 
+### Generalization Experiment
+
+To further validate the effectiveness of our proposed framework, we conducted generalization experiments on the state-of-the-art agent-based code generation method AllianceCoder on CoderEval (Python). The results demonstrate that our pluggable approach can further enhance AllianceCoder's performance.
