@@ -99,4 +99,4 @@ Set API_Key for GPT and DeepSeek in `config.py`
 
 ### Generalization Experiment
 
-To further validate the effectiveness of our proposed framework, we conducted generalization experiments on the state-of-the-art agent-based code generation method AllianceCoder on CoderEval (Python). The results demonstrate that our pluggable approach can further enhance AllianceCoder's performance.
+To further validate the effectiveness of our proposed framework, we conducted generalization experiments on the state-of-the-art agent-based code generation method AllianceCoder on CoderEval (Python). The results demonstrate that our pluggable approach can further enhance AllianceCoder's performance (from 48.7% to 49.13%, improvement 0.88%).
