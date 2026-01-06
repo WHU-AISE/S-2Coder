@@ -9,5 +9,5 @@ summary_generate_model = "gpt-4o-mini"
 embedding_generate_model = "text-embedding-3-small"
 
 summary_prompt = """
-请为以下代码生成简洁的中文摘要，突出其核心功能和作用：
+Please generate a summary of no more than 100 words for the code above, only describing the overall functionality it implements.
 """
