@@ -1,13 +1,13 @@
-# S<sup>2</sup>Coder
-This repository contains the implementation of S<sup>2</sup>Coder, a syntax-constrained and structure-augmented code generation framework.
+# 🚀 S<sup>2</sup>Coder
+🖥️ This repository contains the implementation of S<sup>2</sup>Coder, a syntax-constrained and structure-augmented code generation framework.
 
-## Datasets
+## 📂 Datasets
 We use the two open source repository-level datasets:
 
 + [CoderEval](https://github.com/CoderEval/CoderEval) (Python and Java)
 + [DevEval](https://github.com/seketeam/DevEval) (Python)
 
-## Baselines
+## 📂 Baselines
 We selected several representative and SOTA repository-level code generation approaches as baselines.
 
 + Zero-shot
@@ -34,8 +34,8 @@ Leverage dataflow analysis to enhance the input prompt by integrating structural
 
 Employ a reinforcement learning-based framework that enables the retriever to learn useful content without labeled data for code generation.
 
-## Setup
-### Environment Requirements
+## 🌟 Setup
+### 🛠️ Environment Requirements
 ```yaml
 accelerate==1.11.0
 anyio==4.11.0
@@ -57,25 +57,25 @@ tree-sitter-python==0.25.0
 ```
 
 
-### Get Start
-#### Prepare Data and Model
+### 🛠️ Get Start
+#### 📌 Prepare Data and Model
 Following the instruction in [CoderEval](https://github.com/CoderEval/CoderEval) and [DevEval](https://github.com/seketeam/DevEval), download all repositories to the `./repositories` directory, downdload dataset file to the `./dataset` directory.
 
 Load [Qwen-2.5-Coder](https://huggingface.co/collections/Qwen/qwen25-coder) (7B, 3B, 1.5B, and 0.5B) and [DeepSeek-Coder](https://huggingface.co/collections/deepseek-ai/deepseek-coder) (6.7B and 1.3B) from Hugging Face
 
-#### Set API_key 
+#### 📌 Set API_key 
 Set API_Key for GPT and DeepSeek in `config.py`
 
-#### Build Retrieval Corpus
+#### 📌 Build Retrieval Corpus
 `./build_corpus.py --repo_path repo_path --language language(Python/Java)`
 
-#### Retrieve
+#### 📌 Retrieve
 `./retrieve.py --dataset_name dataset_name --language language --top_k top_k`
 
-#### Generate
+#### 📌 Generate
 `./main.py --dataset_name dataset_name --language language --top_k top_k --checker True --sr True -- coarse_flag True --fine_flag True --model_name model_name --n n`
 
-#### Ablation Study
+#### 📌 Ablation Study
 + w/o syntactic checker
 
    `./main.py --dataset_name dataset_name --language language --top_k top_k --checker False --sr True -- coarse_flag True --fine_flag True --model_name model_name --n n`
@@ -97,7 +97,7 @@ Set API_Key for GPT and DeepSeek in `config.py`
 
    `./main.py --dataset_name dataset_name --language language --top_k top_k --checker True --sr True -- coarse_flag True --fine_flag False --model_name model_name --n n`
 
-### Generalization Experiment
+### 🧪 Generalization Experiment
 + Special dataset
 
    Datasets are [HearthStone and Magic](https://github.com/google-deepmind/card2code), the retrieved corpus are the training set.
