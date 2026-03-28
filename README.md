@@ -1,5 +1,5 @@
 # 🚀 S<sup>2</sup>Coder
-🖥️ This repository contains the implementation of S<sup>2</sup>Coder, a syntax-constrained and structure-augmented code generation framework.
+🖥️ This repository contains the implementation of S<sup>2</sup>Coder, Syntactic Constraint-Aware and Selective Structure-Augmented Code Generation.
 
 ## 📂 Datasets
 We use the two open source repository-level datasets:
@@ -97,12 +97,3 @@ Set API_Key for GPT and DeepSeek in `config.py`
 
    `./main.py --dataset_name dataset_name --language language --top_k top_k --checker True --sr True -- coarse_flag True --fine_flag False --model_name model_name --n n`
 
-### 🧪 Generalization Experiment
-+ Special dataset
-
-   Datasets are [HearthStone and Magic](https://github.com/google-deepmind/card2code), the retrieved corpus are the training set.
-
-
-+ Plug-and-play
-
-   To further validate the effectiveness of our proposed framework, we conducted generalization experiments on the state-of-the-art agent-based code generation method AllianceCoder on CoderEval (Python). The results demonstrate that our pluggable approach can further enhance AllianceCoder's performance (from 48.7% to 49.13%, improvement 0.88%).
