@@ -11,3 +11,7 @@ embedding_generate_model = "text-embedding-3-small"
 summary_prompt = """
 Please generate a summary of no more than 100 words for the code above, only describing the overall functionality it implements.
 """
+
+generation_prompt = """
+Please generated the code according to above retrived functions, selected syntactic structures (in an schema with <tag>value</tag>), and the requierement. The target function signature is: 
+"""
