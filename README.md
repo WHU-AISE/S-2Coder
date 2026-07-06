@@ -32,7 +32,7 @@ Leverage dataflow analysis to enhance the input prompt by integrating structural
 
 + [RLCoder]([https://github.com/DeepSoftwareAnalytics/RLCoder)
 
-Employ a reinforcement learning-based framework that enables the retriever to learn useful content without labeled data for code generation.
+Employ a reinforcement learning-based framework that enables the retriever to learn useful content without labeled data for code generation. Specifically, we utilize the open source [trainer model](https://huggingface.co/nov3630/RLRetriever) for retrieval in RLCoder. Following recent works, such as AllianceCoder, RLCoder may achieve lower performance compared with RepoCoder on CoderEval and DevEval.
 
 ## 🌟 Setup
 ### 🛠️ Environment Requirements
