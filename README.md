@@ -7,6 +7,8 @@ We use the two open source repository-level datasets:
 + [CoderEval](https://github.com/CoderEval/CoderEval) (Python and Java)
 + [DevEval](https://github.com/seketeam/DevEval) (Python)
 
+** The datasets and the repositories can be downloaded in the original source.
+
 ## 📂 Baselines
 We selected several representative and SOTA repository-level code generation approaches as baselines.
 
