@@ -1,0 +1,115 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Code Generation API",
+    "description": "API for running code generation tasks",
+    "version": "1.0"
+  },
+  "host": "127.0.0.1:8081",
+  "basePath": "/",
+  "schemes": ["http"],
+  "paths": {
+    "/run_test": {
+      "post": {
+        "summary": "Execute the code generation task",
+        "description": "Runs the code generation framework and returns the results.",
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "name": "dataset",
+            "in": "formData",
+            "description": "Dataset name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Task successfully executed",
+            "schema": {
+              "$ref": "#/definitions/TaskResults"
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/divide_requirement": {
+      "post": {
+        "summary": "Divide the requirement into multiple tasks",
+        "description": "Takes a requirement description and divides it into smaller tasks.",
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "name": "requiremnt",
+            "in": "formData",
+            "description": "requiremnt description",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Requirement successfully divided",
+            "schema": {
+              "$ref": "#/definitions/TaskList"
+            }
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "TaskResults": {
+      "type": "object",
+      "properties": {
+        "task_info": {
+          "type": "string",
+          "example": "Generate a function to calculate the factorial."
+        },
+        "generated_code": {
+          "type": "string",
+          "example": "def factorial(n): return 1 if n == 0 else n * factorial(n-1)"
+        },
+        "task_count": {
+          "type": "integer",
+          "example": 1
+        },
+        "generated_code_length": {
+          "type": "integer",
+          "example": 50
+        }
+      }
+    },
+    "TaskList": {
+      "type": "object",
+      "properties": {
+        "tasks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "task_id": {
+                "type": "integer",
+                "example": 1
+              },
+              "task_name": {
+                "type": "string",
+                "example": "Generate a function to calculate the factorial."
+              },
+              "description": {
+                "type": "string",
+                "example": "This task involves creating a function that calculates the factorial of a number."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

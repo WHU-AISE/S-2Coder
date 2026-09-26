@@ -173,6 +173,7 @@ def fine_purning(req, code, language, tag_type, xml, asdl_ast, ppl_calculator, g
 
         token_ppl = ppl_calculator.calculate_ppl_qwen(token_conditional_text, token_prefix_text)
 
+    # $Delta$
     if ppl < token_ppl:
         return xml
     else:
@@ -514,7 +515,6 @@ def java_ast_to_code(node, indent=0):
                 code.append(java_ast_to_code(value, indent))
         return "\n".join(code)
     elif isinstance(node, list):
-        # 处理列表类型的子节点
         return "\n".join(java_ast_to_code(item, indent) for item in node)
     elif isinstance(node, str):
         return node
