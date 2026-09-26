@@ -99,3 +99,6 @@ Set API_Key for GPT and DeepSeek in `config.py`
 
    `./main.py --dataset_name dataset_name --language language --top_k top_k --checker True --sr True -- coarse_flag True --fine_flag False --model_name model_name --n n`
 
+
+## Integration
+We integrate S<sup>2</sup>Coder with AllianceCoder, CodeAgent, RepoScope, the code of reproduction is in ./integration
