@@ -556,7 +556,7 @@ def process_dataset(dataset_name, language, checker, top_k, sr, coarse_flag, fin
             prompt += f"\nRelevant Function Key Syntactic Structure:\n{key_syntactic_structure}\n"
         prompt += f"\nRequirement:\n{req}\n"
 
-        generated_code = client.generated_code(prompt, n)
+        generated_code = client.generate_code(prompt, n)
 
         results.append(generated_code)
     
