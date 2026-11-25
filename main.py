@@ -533,6 +533,8 @@ def process_dataset(dataset_name, language, checker, top_k, sr, coarse_flag, fin
     retrieve_functions = load_json(f"retrieve_results/{dataset_name}_{language}.json")
 
     results = []
+
+    ppl_client = QwenPPL()
     for i in range(len(dataset_json)):
         prompt = config.relevant_prompt
         data = dataset_json[i]
@@ -542,7 +544,7 @@ def process_dataset(dataset_name, language, checker, top_k, sr, coarse_flag, fin
         for funcs in retrieved_funcs:
             func = funcs["function_code"]
             key_syntactic_structure = extract_key_syntactic_structure(
-                client,
+                ppl_client,
                 language,
                 req,
                 func,             
